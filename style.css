@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+html,body{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./assests/pexels-maxyne-barcel-10402282\ 1.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    padding: 0rem 8rem;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 3%;
+    left: 0;
+    background-color: transparent;
+    padding: 0px 8rem;
+}
+.logo img{
+    width: 13rem;
+}
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    transition: 0.4s ease all;
+}
+nav>ul li{
+    list-style: none;
+}
+nav>ul a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.4s ease all;
+}
+.order-btn{
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(228, 66, 7);
+    padding: 1.2rem 3.5rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s ease all;
+}
+.bar{
+    font-size: 4rem;
+    color: #fff;
+}
+#bar{
+    display: none;
+}
+.order-btn:hover,.main-btn:hover{
+    background-color: white;
+    color: rgb(228, 66, 7);
+}
+.order-btn:hover{
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(228, 66, 7);
+    text-decoration: underline;
+}
+/* Main */
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.main-heading{
+    font-size: 7rem;
+    text-align: center;
+    color: rgb(239, 188, 19);
+}
+.main-btn{
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: rgb(228, 66, 7);
+    color: #fff;
+    width: 25rem;
+    height: 6rem;
+    transition: 0.4s ease all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main img{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 11rem;
+    z-index: -1;
+}
+@media (max-width:932px) {
+    html,body{
+        font-size: 52.5%;
+    }
+    #bar{
+        display: block;
+        z-index: 3;
+    }
+    .order{
+        position: absolute;
+        z-index: 3;
+        display: none;
+    }
+    .menu{
+        position: absolute;
+        top: -4rem;
+        left: 0%;
+        width: 100%;
+        height: calc(100vh + 4rem);
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.8);
+        gap: 10rem;
+        z-index: 2;
+        overflow: hidden;
+        text-align: center;
+    }
+}
+@media (max-width:768px) {
+    html,body{
+        font-size: 43%;
+    }
+}
